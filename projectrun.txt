@@ -1,0 +1,57 @@
+Open the project folder and open **CMD** or the **VS Code Terminal**.
+
+Run these commands one by one.
+1. Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+2. Activate Virtual Environment
+
+```bash
+.\venv\Scripts\activate
+```
+
+3. Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+
+```
+
+4. Set Up the Database
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+5. Add Sample Data
+
+Add skills, jobs, and admin user:
+
+```bash
+python utils/seed_db.py
+python utils/create_admin.py
+```
+
+
+Step 4: Run the Project
+
+Start the Django server:
+
+```bash
+python manage.py runserver
+```
+
+Now open this link in your browser:
+
+**http://127.0.0.1:8000/**
+
+Extra Command
+
+If you want to delete all registered users, run:
+
+```bash
+python manage.py delete_registered_users
+```
